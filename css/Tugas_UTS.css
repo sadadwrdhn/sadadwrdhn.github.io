@@ -1,0 +1,293 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: black;
+	font-family: 'Montserrat', sans-serif;
+}
+
+header {
+	height: 70px;
+	background-color: crimson;
+	font-family: 'Arsenal', sans-serif;
+}
+header h1 {
+	display: inline-block;
+	float: left;
+	padding: 15px 24px;
+}
+header h1 a{
+	transition: .3s;
+}
+header h1 a:hover .banner {
+	background-color: white;
+	padding: 100px 0;
+}
+header ul {
+list-style: none;
+display: flex;
+float: right;
+}
+header ul li {
+padding: 10px 30px;
+position: relative;
+}
+header ul li:hover .dropdown_menu{
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 100%;
+	background-color: var(--color-blue);
+}
+header ul li:hover .dropdown-menu ul {
+  display: block;
+  margin: 10px;
+}
+header ul li:hover .dropdown-menu ul li {
+  width: 150px;
+  padding: 10px;
+}
+header ul li a{
+	font-size: 20px;
+	color: var(--color-white);
+	transition: .3s;
+}
+header ul li a:hover{
+	color: lightgoldenrodyellow;
+}
+.fas {
+	float: right;
+	margin-left: 10px;
+	padding-top: 3px;
+}
+
+.dropdown_menu {
+display: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.container {
+	width: 90%;
+	margin: 0 auto;
+
+}
+.container ul li a{
+	color: white;
+}
+.container h1 a{
+	color: white;
+}
+.container h1 a:hover{
+	color: black;
+}
+.container::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+.mobile_menu{
+	float: right;
+	display: none;
+	padding: 18px;
+}
+.mobile_menu:hover{
+	cursor: pointer;
+}
+#check{
+	display: none;
+}
+.sidebar {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: -300px;
+	width: 300px;
+	background-color: #FDFD96;
+	transition: .3s;
+	z-index: 9999;
+	font-family: 'Arsenal', sans-serif;
+}
+.sidebar ul li a {
+	color: black;
+}
+.sidebar ul li {
+	padding: 24px;
+	transition: .3s;
+	transition-property: background-color;
+}
+.sidebar ul li:hover{
+	background-color: crimson;
+}
+#check:checked ~ .sidebar {
+	left: 0;
+}
+.banner-left{
+	padding-left: 24px;
+}
+.banner img {
+	width: fit-content;
+	border-radius: 10px;
+	box-shadow: 0 3px 5px #ddd;
+	margin-bottom: 10px;
+}
+.banner h2,
+.banner p,
+.banner span{
+	color: crimson;
+}
+.banner h2 {
+	margin-bottom: 10px;
+}
+.banner p {
+	font-size: 18px;
+}
+.banner-left{
+	padding-left: 24px;
+}
+#date h3,
+#date p {
+	text-align: justify-all;	
+	text-indent: 30px;
+	line-height: 25px;
+	margin-bottom: 15px;
+	color:  #9C824A;
+}
+
+#about p,
+#about h3 {
+	text-align: justify-all;	
+	text-indent: 30px;
+	line-height: 25px;
+	margin-bottom: 15px;
+	color:  #9C824A;
+}
+
+#registration p,
+#registration h3,
+#registration h5 {
+	text-align: justify-all;	
+	text-indent: 30px;
+	line-height: 25px;
+	margin-bottom: 15px;
+	color:  #9C824A;
+}
+#team h3 {
+	text-align: justify-all;	
+	text-indent: 30px;
+	line-height: 25px;
+	margin-bottom: 15px;
+	color:  #9C824A;}
+#vidprof h3 {
+	text-align: justify-all;	
+	text-indent: 30px;
+	line-height: 25px;
+	margin-bottom: 15px;
+	color:  #9C824A;}
+
+#contact {
+	background-color:  black;
+}
+#contact h3,
+#contact p {
+	text-align: justify-all;	
+	text-indent: 30px;
+	line-height: 25px;
+	margin-bottom: 15px;
+	color:  #9C824A;
+}
+.col-4 {
+	width:25%;
+	box-sizing: border-box;
+	padding:5px;
+	float: left;
+	text-align: center;
+}
+.col-4 img {
+	width: 100%;
+}
+.col-4 a:hover img{
+	transform: scale(1.2);
+}
+#gallery h3, #gallery a {
+	color: #9C824A ;
+}
+.col-3 {
+	width: 33.33%;
+	box-sizing: border-box;
+	float: left;
+	text-align: center;
+	padding: 50px 10px;
+}
+.col-3 h4 {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #ddd;
+	margin-bottom: 15px;
+	color: #F84744;
+}
+section {
+	padding: 50px 0;
+}
+@media (max-width : 768px){
+	.mobile_menu{
+		display: block;
+	}
+	header ul {
+		display: none;
+	}
+	.col-4 {
+		width: 50%;
+	}
+	.col-3 {
+		width: 100%;
+	}}
+i {
+	color: white;
+}
+.cards-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.card img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.card {
+  margin: 0 0.5em;
+  box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, 0.18);
+  border: none;
+  border-radius: 10px;
+}
+.carousel-inner {
+  padding: 1em;
+}
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #e1e1e1;
+  width: 5vh;
+  height: 5vh;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@media (min-width: 768px) {
+  .card img {
+    height: 11em;
+  }
+}
+footer{
+	background-color: crimson;
+	padding: 50px;
+	text-align: center;
+}
+
+footer small {
+	color: #fff;
+}
+html{
+	scroll-behavior: smooth;
+}
